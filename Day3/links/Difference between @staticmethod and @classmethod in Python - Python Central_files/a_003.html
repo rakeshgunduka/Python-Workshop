@@ -1,0 +1,1831 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html lang="en" dir="ltr" class="ie8"><![endif]-->
+<!--[if IE 9]><html lang="en" dir="ltr" class="ie9"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="js no-touch localstorage sessionstorage contenteditable use-opacity-transitions" dir="ltr" lang="en"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Disqus Comments</title>
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    
+    <style>
+        html {
+            overflow: hidden;
+        }
+
+        
+    </style>
+
+<link href="a_data_003/lounge.css" rel="stylesheet"><script src="a_data_003/config.js" data-requiremodule="remote/config" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="a_data_003/common.js" data-requiremodule="common.bundle" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="a_data_003/lounge_002.js" data-requiremodule="lounge.bundle" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><style id="css_1443898095394"></style><!-- base href="http://disqus.com/embed/comments/?base=default&version=0e711e2730e4c6cf1685e5e4dfedf9c9&f=pythoncentral&t_i=1295%20http%3A%2F%2Fwww.pythoncentral.io%2F%3Fp%3D1295&t_u=http%3A%2F%2Fpythoncentral.io%2Fdifference-between-staticmethod-and-classmethod-in-python%2F&t_e=Difference%20between%20%40staticmethod%20and%20%40classmethod%20in%20Python&t_d=%20Difference%20between%20%40staticmethod%20and%20%40classmethod%20in%20Python&t_t=Difference%20between%20%40staticmethod%20and%20%40classmethod%20in%20Python&s_o=default&l=" --><link href="http://tempest.services.disqus.com/" rel="preconnect"><link href="http://tempest.services.disqus.com/" rel="dns-prefetch"><link href="a_data_003/discovery.css" rel="stylesheet"><script charset="UTF-8" async="" src="a_data_003/event.js"></script><script src="a_data_003/ga.js" data-requiremodule="ga" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="a_data_003/discovery.js" data-requiremodule="discovery/main" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script></head>
+<body>
+    
+
+    
+    <!--[if lt IE 10]><p style="color: #fff; background-color: #f05f70; padding: 10px; margin-top: 20px;">
+        You're using a browser that Disqus plans to stop supporting soon. For more information, visit our list of 
+        <a href="https://help.disqus.com/customer/portal/articles/466228-which-browsers-does-disqus-work-with-" style="color: #fff; text-decoration: underline;">supported browsers</a>
+        and consider upgrading.
+    </p><![endif]-->
+    <div id="error" style="display:none; text-align: center">
+        <p>We were unable to load Disqus. If you are a moderator please see our <a href="https://docs.disqus.com/help/83/"> troubleshooting guide</a>. </p>
+    </div>
+
+    
+    <script type="text/json" id="disqus-forumData">{"session":{"canModerate":false,"audienceSyncVerified":false,"mustVerify":false,"canReply":true,"mustVerifyEmail":false},"features":{},"forum":{"category":"Tech","description":"\u003cp>A one-stop, fun resource for people who like to program in Python.\u003c/p>","founder":"3049870","settings":{"supportLevel":0,"adsDRNativeEnabled":false,"disable3rdPartyTrackers":false,"moderatorText":"Editor","ssoRequired":false,"linkAffiliationEnabled":false,"hasCustomAvatar":false,"organicDiscoveryEnabled":false,"colorScheme":"light","discoveryMax":false,"discoverySettingsUrl":"https://pythoncentral.disqus.com/admin/settings/ads/","adsVideoEnabled":false,"allowAnonPost":true,"allowMedia":true,"promotedDiscoveryEnabled":false,"allowAnonVotes":false,"mustVerify":false,"mustVerifyEmail":false,"discoveryVariant":null,"adsBannerEnabled":false,"audienceSyncEnabled":false,"typeface":"sans-serif","discoveryLocked":false,"discoveryThumbnailsEnabled":false,"isVIP":false},"url":"http://www.pythoncentral.io/","guidelines":null,"favicon":{"permalink":"http://disqus.com/api/forums/favicons/pythoncentral.jpg","cache":"//a.disquscdn.com/uploads/forums/119/4593/favicon.png"},"language":"en","avatar":{"small":{"permalink":"http://disqus.com/api/forums/avatars/pythoncentral.jpg?size=32","cache":"//a.disquscdn.com/1443650554/images/noavatar32.png"},"large":{"permalink":"http://disqus.com/api/forums/avatars/pythoncentral.jpg?size=92","cache":"//a.disquscdn.com/1443650554/images/noavatar92.png"}},"pk":"1194593","signedUrl":"http://disq.us/?url=http%3A%2F%2Fwww.pythoncentral.io%2F&key=cKIdGoR9c4ly0f7qUEWAhA","raw_guidelines":null,"id":"pythoncentral","channel":null,"name":"Python Central"}}</script>
+
+    
+    <script type="text/json" id="disqus-threadData">{"cursor":{"hasPrev":false,"prev":null,"total":15,"hasNext":false,"next":"1:0:0"},"code":0,"response":{"lastModified":1439805998,"posts":[{"forum":"pythoncentral","parent":null,"isApproved":true,"author":{"username":"alexandergriccio","about":"","name":"Alexander G. Riccio","disable3rdPartyTrackers":false,"url":"http://about.me/ariccio","isAnonymous":false,"rep":1.2483769999999998,"profileUrl":"https://disqus.com/by/alexandergriccio/","isPowerContributor":false,"reputation":1.2483769999999998,"location":"","isPrivate":false,"isPrimary":true,"joinedAt":"2013-07-15T23:00:40","id":"62536675","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/alexandergriccio.jpg","cache":"//a.disquscdn.com/uploads/users/6253/6675/avatar32.jpg?1442818500"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/alexandergriccio.jpg","cache":"//a.disquscdn.com/uploads/users/6253/6675/avatar92.jpg?1442818500","large":{"permalink":"http://disqus.com/api/users/avatars/alexandergriccio.jpg","cache":"//a.disquscdn.com/uploads/users/6253/6675/avatar92.jpg?1442818500"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"Lines 10-17 in the @staticmethod sample case need indentation.\n\n\nI love the post!","createdAt":"2013-12-27T11:12:27","id":"1178094551","thread":"1607126952","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":4,"isEdited":false,"message":"\u003cp>Lines 10-17 in the @staticmethod sample case need indentation.\u003c/p>\u003cp>I love the post!\u003c/p>","isSpam":false,"isHighlighted":false,"points":4},{"forum":"pythoncentral","parent":1178094551,"isApproved":true,"author":{"username":"disqus_ncxT4ELKGt","about":"","name":"Alex Dalyac","disable3rdPartyTrackers":false,"url":"","isAnonymous":false,"rep":1.236944,"profileUrl":"https://disqus.com/by/disqus_ncxT4ELKGt/","isPowerContributor":false,"reputation":1.236944,"location":"","isPrivate":false,"isPrimary":true,"joinedAt":"2013-08-14T16:29:07","id":"67365786","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/disqus_ncxT4ELKGt.jpg","cache":"//a.disquscdn.com/uploads/users/6736/5786/avatar32.jpg?1436369093"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/disqus_ncxT4ELKGt.jpg","cache":"//a.disquscdn.com/uploads/users/6736/5786/avatar92.jpg?1436369093","large":{"permalink":"http://disqus.com/api/users/avatars/disqus_ncxT4ELKGt.jpg","cache":"//a.disquscdn.com/uploads/users/6736/5786/avatar92.jpg?1436369093"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"thanks for pointing that out! it confused me.","createdAt":"2014-02-11T15:01:30","id":"1239676079","thread":"1607126952","depth":1,"numReports":0,"isDeletedByAuthor":false,"likes":0,"isEdited":false,"message":"\u003cp>thanks for pointing that out! it confused me.\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"forum":"pythoncentral","parent":null,"isApproved":true,"author":{"username":"disqus_7itAk7LENC","about":"Entrepeneur","name":"Julyan","disable3rdPartyTrackers":false,"url":"http://julyandavey.com","isAnonymous":false,"rep":1.2323199999999999,"profileUrl":"https://disqus.com/by/disqus_7itAk7LENC/","isPowerContributor":false,"reputation":1.2323199999999999,"location":"UK","isPrivate":false,"isPrimary":true,"joinedAt":"2014-12-13T12:28:15","id":"135523360","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/disqus_7itAk7LENC.jpg","cache":"//a.disquscdn.com/uploads/users/13552/3360/avatar32.jpg?1418473701"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/disqus_7itAk7LENC.jpg","cache":"//a.disquscdn.com/uploads/users/13552/3360/avatar92.jpg?1418473701","large":{"permalink":"http://disqus.com/api/users/avatars/disqus_7itAk7LENC.jpg","cache":"//a.disquscdn.com/uploads/users/13552/3360/avatar92.jpg?1418473701"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"This is fantastic. Really helped me to understand like no other blog article!","createdAt":"2014-12-13T12:28:20","id":"1740138116","thread":"1607126952","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":2,"isEdited":false,"message":"\u003cp>This is fantastic. Really helped me to understand like no other blog article!\u003c/p>","isSpam":false,"isHighlighted":false,"points":2},{"forum":"pythoncentral","parent":null,"isApproved":true,"author":{"name":"yaqian","url":"","profileUrl":"","emailHash":"","avatar":{"small":{"permalink":"//a.disquscdn.com/1443650554/images/noavatar32.png","cache":"//a.disquscdn.com/1443650554/images/noavatar32.png"},"large":{"permalink":"//a.disquscdn.com/1443650554/images/noavatar92.png","cache":"//a.disquscdn.com/1443650554/images/noavatar92.png"},"permalink":"//a.disquscdn.com/1443650554/images/noavatar92.png","cache":"//a.disquscdn.com/1443650554/images/noavatar92.png"},"isAnonymous":true},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"put the cross label on Kls.printed, not ik.smethod.","createdAt":"2013-08-21T05:38:18","id":"1009559387","thread":"1607126952","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":2,"isEdited":false,"message":"\u003cp>put the cross label on Kls.printed, not ik.smethod.\u003c/p>","isSpam":false,"isHighlighted":false,"points":2},{"forum":"pythoncentral","parent":null,"isApproved":true,"author":{"name":"yaqian","url":"","profileUrl":"","emailHash":"","avatar":{"small":{"permalink":"//a.disquscdn.com/1443650554/images/noavatar32.png","cache":"//a.disquscdn.com/1443650554/images/noavatar32.png"},"large":{"permalink":"//a.disquscdn.com/1443650554/images/noavatar92.png","cache":"//a.disquscdn.com/1443650554/images/noavatar92.png"},"permalink":"//a.disquscdn.com/1443650554/images/noavatar92.png","cache":"//a.disquscdn.com/1443650554/images/noavatar92.png"},"isAnonymous":true},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"There is an error in the diagram. we should put the cross label on Kls.printed, not Kls.smethod.","createdAt":"2013-08-21T05:37:11","id":"1009557230","thread":"1607126952","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":2,"isEdited":false,"message":"\u003cp>There is an error in the diagram. we should put the cross label on Kls.printed, not Kls.smethod.\u003c/p>","isSpam":false,"isHighlighted":false,"points":2},{"forum":"pythoncentral","parent":null,"isApproved":true,"author":{"username":"kamelzcs","about":"","name":"kamelzcs","disable3rdPartyTrackers":false,"url":"","isAnonymous":false,"rep":1.235174,"profileUrl":"https://disqus.com/by/kamelzcs/","isPowerContributor":false,"reputation":1.235174,"location":"","isPrivate":false,"isPrimary":true,"joinedAt":"2013-01-01T15:17:56","id":"40035414","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/kamelzcs.jpg","cache":"//a.disquscdn.com/uploads/users/4003/5414/avatar32.jpg?1417685447"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/kamelzcs.jpg","cache":"//a.disquscdn.com/uploads/users/4003/5414/avatar92.jpg?1417685447","large":{"permalink":"http://disqus.com/api/users/avatars/kamelzcs.jpg","cache":"//a.disquscdn.com/uploads/users/4003/5414/avatar92.jpg?1417685447"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"It is really great post!","createdAt":"2014-12-04T09:29:21","id":"1725121155","thread":"1607126952","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":1,"isEdited":false,"message":"\u003cp>It is really great post!\u003c/p>","isSpam":false,"isHighlighted":false,"points":1},{"forum":"pythoncentral","parent":null,"isApproved":true,"author":{"username":"lorenamesa","about":"","name":"Lorena Mesa","disable3rdPartyTrackers":false,"url":"","isAnonymous":false,"rep":1.235612,"profileUrl":"https://disqus.com/by/lorenamesa/","isPowerContributor":false,"reputation":1.235612,"location":"","isPrivate":false,"isPrimary":true,"joinedAt":"2013-11-12T20:20:54","id":"81533047","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/lorenamesa.jpg","cache":"//a.disquscdn.com/uploads/users/8153/3047/avatar32.jpg?1415470372"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/lorenamesa.jpg","cache":"//a.disquscdn.com/uploads/users/8153/3047/avatar92.jpg?1415470372","large":{"permalink":"http://disqus.com/api/users/avatars/lorenamesa.jpg","cache":"//a.disquscdn.com/uploads/users/8153/3047/avatar92.jpg?1415470372"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"Love this! THX!","createdAt":"2014-04-16T16:35:30","id":"1340750703","thread":"1607126952","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":1,"isEdited":false,"message":"\u003cp>Love this! THX!\u003c/p>","isSpam":false,"isHighlighted":false,"points":1},{"forum":"pythoncentral","parent":null,"isApproved":true,"author":{"username":"disqus_ncxT4ELKGt","about":"","name":"Alex Dalyac","disable3rdPartyTrackers":false,"url":"","isAnonymous":false,"rep":1.236944,"profileUrl":"https://disqus.com/by/disqus_ncxT4ELKGt/","isPowerContributor":false,"reputation":1.236944,"location":"","isPrivate":false,"isPrimary":true,"joinedAt":"2013-08-14T16:29:07","id":"67365786","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/disqus_ncxT4ELKGt.jpg","cache":"//a.disquscdn.com/uploads/users/6736/5786/avatar32.jpg?1436369093"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/disqus_ncxT4ELKGt.jpg","cache":"//a.disquscdn.com/uploads/users/6736/5786/avatar92.jpg?1436369093","large":{"permalink":"http://disqus.com/api/users/avatars/disqus_ncxT4ELKGt.jpg","cache":"//a.disquscdn.com/uploads/users/6736/5786/avatar92.jpg?1436369093"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"love the fact that you're using all these examples and diagrams!\nthe classmethod example was great - now I know when to use those.\nbut I still don't understand when I would want to use staticmethods, because it seemed to me that the staticmethod examples were useless functions that didn't really do anything.\nalso, what does one call a method that neither a classmethod nor a staticmethod? an instance method?","createdAt":"2014-02-11T15:03:45","id":"1239678733","thread":"1607126952","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":1,"isEdited":false,"message":"\u003cp>love the fact that you're using all these examples and diagrams!\u003cbr>the classmethod example was great - now I know when to use those.\u003cbr>but I still don't understand when I would want to use staticmethods, because it seemed to me that the staticmethod examples were useless functions that didn't really do anything.\u003cbr>also, what does one call a method that neither a classmethod nor a staticmethod? an instance method?\u003c/p>","isSpam":false,"isHighlighted":false,"points":1},{"forum":"pythoncentral","parent":null,"isApproved":true,"author":{"username":"disqus_QzVisr4y35","about":"","name":"ali reza","disable3rdPartyTrackers":false,"url":"","isAnonymous":false,"rep":1.2381259999999998,"profileUrl":"https://disqus.com/by/disqus_QzVisr4y35/","isPowerContributor":false,"reputation":1.2381259999999998,"location":"","isPrivate":false,"isPrimary":true,"joinedAt":"2015-02-13T14:45:42","id":"144361016","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/disqus_QzVisr4y35.jpg","cache":"//a.disquscdn.com/uploads/users/14436/1016/avatar32.jpg?1439869627"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/disqus_QzVisr4y35.jpg","cache":"//a.disquscdn.com/uploads/users/14436/1016/avatar92.jpg?1439869627","large":{"permalink":"http://disqus.com/api/users/avatars/disqus_QzVisr4y35.jpg","cache":"//a.disquscdn.com/uploads/users/14436/1016/avatar92.jpg?1439869627"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"TNX TNX TNX","createdAt":"2015-08-17T10:06:37","id":"2198131587","thread":"1607126952","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":0,"isEdited":false,"message":"\u003cp>TNX TNX TNX\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"forum":"pythoncentral","parent":null,"isApproved":true,"author":{"username":"disqus_x4ZeuDHNtP","about":"","name":"Jake Locker","disable3rdPartyTrackers":false,"url":"","isAnonymous":false,"rep":1.684936,"profileUrl":"https://disqus.com/by/disqus_x4ZeuDHNtP/","isPowerContributor":false,"reputation":1.684936,"location":"","isPrivate":false,"isPrimary":true,"joinedAt":"2013-05-22T20:04:28","id":"51587252","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/disqus_x4ZeuDHNtP.jpg","cache":"//a.disquscdn.com/uploads/users/5158/7252/avatar32.jpg?1428940709"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/disqus_x4ZeuDHNtP.jpg","cache":"//a.disquscdn.com/uploads/users/5158/7252/avatar92.jpg?1428940709","large":{"permalink":"http://disqus.com/api/users/avatars/disqus_x4ZeuDHNtP.jpg","cache":"//a.disquscdn.com/uploads/users/5158/7252/avatar92.jpg?1428940709"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"THANK YOU! I have been trying to find a post which actually describes the difference between static and class methods. Everyone just uses interchangeable code that doesn't explain it. Thanks for finally pointing it out!","createdAt":"2015-08-16T21:37:23","id":"2197477433","thread":"1607126952","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":0,"isEdited":false,"message":"\u003cp>THANK YOU! I have been trying to find a post which actually describes the difference between static and class methods. Everyone just uses interchangeable code that doesn't explain it. Thanks for finally pointing it out!\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"forum":"pythoncentral","parent":null,"isApproved":true,"author":{"username":"horstjens","about":"open-source game programmer and teacher.\r\nAuthor of http://ThePythonGameBook.com","name":"Horst JENS","disable3rdPartyTrackers":false,"url":"http://www.spielend-programmieren.at","isAnonymous":false,"rep":1.2612459999999999,"profileUrl":"https://disqus.com/by/horstjens/","isPowerContributor":false,"reputation":1.2612459999999999,"location":"Vienna, Austria","isPrivate":false,"isPrimary":true,"joinedAt":"2011-05-21T06:55:22","id":"11201753","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/horstjens.jpg","cache":"//a.disquscdn.com/uploads/users/1120/1753/avatar32.jpg?1441692863"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/horstjens.jpg","cache":"//a.disquscdn.com/uploads/users/1120/1753/avatar92.jpg?1441692863","large":{"permalink":"http://disqus.com/api/users/avatars/horstjens.jpg","cache":"//a.disquscdn.com/uploads/users/1120/1753/avatar92.jpg?1441692863"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"thanks for the post, Arun","createdAt":"2015-08-03T06:55:11","id":"2171443521","thread":"1607126952","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":0,"isEdited":false,"message":"\u003cp>thanks for the post, Arun\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"forum":"pythoncentral","parent":null,"isApproved":true,"author":{"username":"csukuangfj","about":"","name":"csukuangfj","disable3rdPartyTrackers":false,"url":"","isAnonymous":false,"rep":1.2339689999999999,"profileUrl":"https://disqus.com/by/csukuangfj/","isPowerContributor":false,"reputation":1.2339689999999999,"location":"","isPrivate":false,"isPrimary":true,"joinedAt":"2014-03-11T12:16:53","id":"98225387","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/csukuangfj.jpg","cache":"//a.disquscdn.com/uploads/users/9822/5387/avatar32.jpg?1437949602"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/csukuangfj.jpg","cache":"//a.disquscdn.com/uploads/users/9822/5387/avatar92.jpg?1437949602","large":{"permalink":"http://disqus.com/api/users/avatars/csukuangfj.jpg","cache":"//a.disquscdn.com/uploads/users/9822/5387/avatar92.jpg?1437949602"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"Good examples. Thanks a lot.","createdAt":"2015-07-26T22:26:41","id":"2158320889","thread":"1607126952","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":0,"isEdited":false,"message":"\u003cp>Good examples. Thanks a lot.\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"forum":"pythoncentral","parent":null,"isApproved":true,"author":{"username":"disqus_flC8GHXLe6","about":"","name":"Annie Chang","disable3rdPartyTrackers":false,"url":"","isAnonymous":false,"rep":1.232124,"profileUrl":"https://disqus.com/by/disqus_flC8GHXLe6/","isPowerContributor":false,"reputation":1.232124,"location":"","isPrivate":false,"isPrimary":true,"joinedAt":"2014-11-18T07:40:23","id":"131980720","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/disqus_flC8GHXLe6.jpg","cache":"//a.disquscdn.com/uploads/users/13198/720/avatar32.jpg?1416296425"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/disqus_flC8GHXLe6.jpg","cache":"//a.disquscdn.com/uploads/users/13198/720/avatar92.jpg?1416296425","large":{"permalink":"http://disqus.com/api/users/avatars/disqus_flC8GHXLe6.jpg","cache":"//a.disquscdn.com/uploads/users/13198/720/avatar92.jpg?1416296425"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"`ik1.do_reset()` and `ik1.set_db()` can't work in python 2.7.\n\nGuess this is an article for python 3.0.","createdAt":"2014-11-18T07:40:29","id":"1698727479","thread":"1607126952","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":0,"isEdited":false,"message":"\u003cp>`ik1.do_reset()` and `ik1.set_db()` can't work in python 2.7.\u003c/p>\u003cp>Guess this is an article for python 3.0.\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"forum":"pythoncentral","parent":null,"isApproved":true,"author":{"username":"gorenali","about":"Programming. Embedded System, Linux and Windows Developer.. Java, C#, C, C++, D, Python Developer","name":"Ali","disable3rdPartyTrackers":false,"url":"http://blog.aligoren.net","isAnonymous":false,"rep":1.2169649999999999,"profileUrl":"https://disqus.com/by/gorenali/","isPowerContributor":false,"reputation":1.2169649999999999,"location":"Turkey","isPrivate":true,"isPrimary":true,"joinedAt":"2013-08-24T18:07:12","id":"69572631","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/gorenali.jpg","cache":"//a.disquscdn.com/uploads/users/6957/2631/avatar32.jpg?1377369270"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/gorenali.jpg","cache":"//a.disquscdn.com/uploads/users/6957/2631/avatar92.jpg?1377369270","large":{"permalink":"http://disqus.com/api/users/avatars/gorenali.jpg","cache":"//a.disquscdn.com/uploads/users/6957/2631/avatar92.jpg?1377369270"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"I love this post thanks Arun","createdAt":"2014-07-13T03:46:24","id":"1482654335","thread":"1607126952","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":0,"isEdited":false,"message":"\u003cp>I love this post thanks Arun\u003c/p>","isSpam":false,"isHighlighted":false,"points":0},{"forum":"pythoncentral","parent":null,"isApproved":true,"author":{"username":"swarvanusengupta","about":"","name":"Swarvanu Sengupta","disable3rdPartyTrackers":false,"url":"","isAnonymous":false,"rep":1.232124,"profileUrl":"https://disqus.com/by/swarvanusengupta/","isPowerContributor":false,"reputation":1.232124,"location":"","isPrivate":false,"isPrimary":true,"joinedAt":"2014-06-11T03:17:37","id":"110250481","avatar":{"small":{"permalink":"http://disqus.com/api/users/avatars/swarvanusengupta.jpg","cache":"//a.disquscdn.com/uploads/users/11025/481/avatar32.jpg?1402456667"},"isCustom":true,"permalink":"http://disqus.com/api/users/avatars/swarvanusengupta.jpg","cache":"//a.disquscdn.com/uploads/users/11025/481/avatar92.jpg?1402456667","large":{"permalink":"http://disqus.com/api/users/avatars/swarvanusengupta.jpg","cache":"//a.disquscdn.com/uploads/users/11025/481/avatar92.jpg?1402456667"}}},"media":[],"isDeleted":false,"isFlagged":false,"dislikes":0,"raw_message":"can we call __init__ from static method inside of a class..","createdAt":"2014-06-11T03:17:45","id":"1429715350","thread":"1607126952","depth":0,"numReports":0,"isDeletedByAuthor":false,"likes":0,"isEdited":false,"message":"\u003cp>can we call __init__ from static method inside of a class..\u003c/p>","isSpam":false,"isHighlighted":false,"points":0}],"thread":{"feed":"https://pythoncentral.disqus.com/difference_between_staticmethod_and_classmethod_in_python/latest.rss","uploadAdd":"//pythoncentral.disqus.com/thread/difference_between_staticmethod_and_classmethod_in_python/async_media_upload/","identifiers":["1295 http://www.pythoncentral.io/?p=1295"],"dislikes":0,"likes":1,"message":"","id":"1607126952","createdAt":"2013-08-15T03:19:02","category":"1217892","clean_title":"Difference between @staticmethod and @classmethod in Python","userScore":0,"userSubscription":false,"isSpam":false,"signedLink":"http://disq.us/?url=http%3A%2F%2Fpythoncentral.io%2Fdifference-between-staticmethod-and-classmethod-in-python%2F&key=mU_h6Mp913009TqczNZASA","isDeleted":false,"hasStreaming":false,"uploadRemove":"//pythoncentral.disqus.com/thread/difference_between_staticmethod_and_classmethod_in_python/async_media_remove/","raw_message":"","isClosed":false,"link":"http://pythoncentral.io/difference-between-staticmethod-and-classmethod-in-python/","slug":"difference_between_staticmethod_and_classmethod_in_python","forum":"pythoncentral","author":"3049870","posts":15,"moderators":[3049870],"title":"Difference between @staticmethod and @classmethod in Python","highlightedPost":null}},"order":"popular"}</script>
+
+    
+
+    <div id="fixed-content"></div>
+
+
+    
+        
+        <!--[if lte IE 8]>
+<script src="//a.disquscdn.com/1443650554/build/vendor/ie8.js"></script>
+<![endif]-->
+<!--[if IE 9]>
+<script src="//a.disquscdn.com/1443650554/build/vendor/ie9.js"></script>
+<![endif]-->
+
+        
+<script type="text/json" id="disqus-urls">{
+    "root":"//disqus.com",
+    "next":"//a.disquscdn.com/next/current/embed"
+}</script>
+
+        <script src="a_data_003/lounge.js" id="bootstrap-script" data-app="lounge" async=""></script>
+    
+
+
+<div id="layout" data-tracking-area="layout">
+
+<div id="placement-top" data-tracking-area="discovery-north"></div>
+
+<div id="onboard" data-tracking-area="onboard"></div>
+
+<div style="display: none;" id="highlighted-post" data-tracking-area="highlighted" class="highlighted-post"></div>
+
+<div id="global-alert"></div>
+
+<header id="main-nav" data-tracking-area="main-nav">
+<nav class="nav nav-primary">
+<ul>
+<li class="tab-conversation active" data-role="post-count"><a class="publisher-nav-color">
+<span class="comment-count">
+15 comments
+</span>
+
+<span class="comment-count-placeholder">
+Comments
+</span>
+</a>
+</li>
+<li class="tab-community">
+<a href="https://disqus.com/home/forums/pythoncentral/" class="publisher-nav-color" data-action="community-sidebar" data-forum="pythoncentral" id="community-tab">
+<span class="community-name">
+<strong>Python Central</strong>
+
+</span>
+
+<strong class="community-name-placeholder">Community</strong>
+</a>
+</li>
+<li class="dropdown user-menu" data-role="logout"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+<span class="dropdown-toggle-wrapper">
+
+<span>
+Login
+</span>
+
+</span> <span class="caret"></span>
+</a>
+<ul class="dropdown-menu">
+
+
+<li>
+<a href="#" data-action="auth:disqus">Disqus</a>
+</li>
+<li>
+<a href="#" data-action="auth:facebook">Facebook</a>
+</li>
+<li>
+<a href="#" data-action="auth:twitter">Twitter</a>
+</li>
+<li>
+<a href="#" data-action="auth:google">Google</a>
+</li>
+
+
+
+</ul>
+</li>
+<li class="notification-menu unread" data-role="notification-menu"><a href="https://disqus.com/home/inbox/" class="notification-container" data-action="home" data-home-path="home/inbox/">
+<span class="notification-icon icon-comment" aria-hidden=""></span>
+<span class="notification-count" data-role="notification-count">1</span>
+</a>
+</li>
+</ul>
+</nav>
+</header>
+
+<section id="conversation" data-role="main" data-tracking-area="main">
+<div class="nav nav-secondary" data-tracking-area="secondary-nav">
+<ul>
+<li id="recommend-button" class="recommend dropdown">
+<div class="thread-likes"><a href="#" data-action="recommend" title="Recommend this discussion" class="dropdown-toggle ">
+<span class="icon-heart"></span>
+<span class="label label-default">Recommend</span>
+<span class="label label-recommended">Recommended</span>
+<span class="label label-count">1</span>
+</a>
+<ul class="dropdown-menu coachmark">
+<li>
+<h2>Discussion Recommended!</h2>
+<p>Recommending means this is a discussion worth sharing. It gets shared
+ to your followers' Disqus feeds, and gives the creator kudos!</p>
+<a href="http://disqus.com/home/?utm_source=disqus_embed&amp;utm_content=recommend_btn" class="btn btn-primary" target="_blank">
+ Find More Discussions 
+</a>
+</li>
+</ul>
+</div></li>
+<li id="thread-share-menu" class="dropdown share-menu hidden-sm"><a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Share">
+<span class="icon-export"></span>
+<span class="label">Share</span>
+</a>
+<ul class="share-menu dropdown-menu">
+<li class="share">Share this discussion on
+<ul>
+<li class="twitter">
+<a data-action="share:twitter" href="#">Twitter</a>
+</li>
+<li class="facebook">
+<a data-action="share:facebook" href="#">Facebook</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-role="post-sort" class="dropdown sorting pull-right">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+Sort by Best
+
+
+<span class="caret"></span>
+</a>
+<ul class="dropdown-menu pull-right">
+<li class="selected">
+<a href="#" data-action="sort" data-sort="popular">Best<i aria-hidden="true" class="icon-checkmark"></i></a>
+</li>
+
+<li>
+<a href="#" data-action="sort" data-sort="desc">Newest<i aria-hidden="true" class="icon-checkmark"></i></a>
+</li>
+
+<li>
+<a href="#" data-action="sort" data-sort="asc">Oldest<i aria-hidden="true" class="icon-checkmark"></i></a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div id="posts">
+<div id="form"><form class="reply">
+<div class="postbox">
+<div role="alert"></div>
+<div class="avatar">
+<span class="user">
+<img data-role="user-avatar" src="a_data_003/noavatar92.png" alt="Avatar">
+</span>
+</div>
+
+<div class="textarea-wrapper" data-role="textarea" dir="auto"><div><span class="placeholder">Join the discussion…</span><div aria-label="Join the discussion…" style="overflow: auto; max-height: 350px;" data-role="editable" aria-multiline="true" role="textbox" tabindex="0" class="textarea" contenteditable="true"><p><br></p></div><div style="display: none;"><ul class="suggestions">
+<li class="header">
+<h5>in this conversation</h5>
+</li>
+</ul>
+</div></div>
+<div data-role="drag-drop-placeholder" class="media-drag-hover" style="display: none">
+<div class="drag-text">
+⬇ Drag and drop your images here to upload them.
+</div>
+</div>
+<div class="media-preview empty" data-role="media-preview"><ul data-role="media-legacy-list"></ul>
+<ul data-role="media-progress-list"></ul>
+<ul data-role="media-rich-list"></ul>
+<div class="media-expanded empty" data-role="media-preview-expanded">
+<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-role="media-preview-expanded-image" alt="Media preview placeholder">
+</div>
+</div>
+<div class="edit-alert" role="postbox-alert"></div>
+<div class="post-actions">
+<ul class="wysiwyg">
+<li data-role="media-uploader"><a href="#" tabindex="-1" data-action="attach" class="attach" title="Upload Images"><span>Attach</span></a>
+<input data-role="media-upload" tabindex="-1" accept="image/*" type="file">
+</li>
+</ul>
+</div>
+</div>
+
+<div data-role="login-form"><div><section class="auth-section logged-out">
+<div class="connect">
+<h6>Log in with</h6>
+<ul data-role="login-menu" class="services login-buttons">
+
+
+<li class="auth-disqus">
+<button type="button" data-action="auth:disqus" title="Disqus"><i class="icon-disqus"></i></button>
+</li>
+<li class="auth-facebook">
+<button type="button" data-action="auth:facebook" title="Facebook"><i class="icon-facebook-circle"></i></button>
+</li>
+<li class="auth-twitter">
+<button type="button" data-action="auth:twitter" title="Twitter"><i class="icon-twitter-circle"></i></button>
+</li>
+<li class="auth-google">
+<button type="button" data-action="auth:google" title="Google"><i class="icon-google-plus-circle"></i></button>
+</li>
+</ul>
+</div>
+<div class="guest">
+<h6 class="guest-form-title">
+<span class="register-text"> or sign up with Disqus </span>
+<span class="guest-text"> or pick a name </span>
+</h6>
+
+<div class="what-is-disqus help-icon">
+<div id="rules" class="tooltip show">
+<h3>Disqus is a discussion network</h3>
+<ul>
+<li><span>Disqus never moderates or censors. The rules on this community are its own.</span></li>
+<li><span>Your email is safe with us. It's only used for moderation and optional notifications.</span></li>
+<li><span>Don't be a jerk or do anything illegal. Everything is easier that way.</span></li>
+</ul>
+<p class="clearfix"><a href="https://docs.disqus.com/kb/terms-and-policies/" class="btn btn-small" target="_blank">Read full terms and conditions</a></p>
+</div>
+</div>
+
+<p class="input-wrapper">
+<input dir="auto" placeholder="Name" name="display_name" id="view62_display_name" maxlength="30" type="text">
+</p>
+
+<div class="guest-details " data-role="guest-details">
+<p class="input-wrapper">
+<input dir="auto" placeholder="Email" name="email" id="view62_email" type="email">
+</p>
+
+<p class="input-wrapper">
+<input dir="auto" class="register-text" placeholder="Password" name="password" id="view62_password" type="password">
+</p>
+
+<div class="acceptance-wrapper register-text">
+By signing up, you agree to the Disqus <a target="_blank" href="https://help.disqus.com/customer/portal/articles/1753105-basic-rules-for-disqus-powered-profiles-and-discussions">Basic Rules</a>, <a target="_blank" href="https://help.disqus.com/customer/portal/articles/466260-terms-of-service">Terms of Service</a>, and <a target="_blank" href="https://help.disqus.com/customer/portal/articles/466259-privacy-policy">Privacy Policy</a>.
+</div>
+<div class="acceptance-wrapper guest-text">
+By posting, you agree to the Disqus <a target="_blank" href="https://help.disqus.com/customer/portal/articles/1753105-basic-rules-for-disqus-powered-profiles-and-discussions">Basic Rules</a>, <a target="_blank" href="https://help.disqus.com/customer/portal/articles/466260-terms-of-service">Terms of Service</a>, and <a target="_blank" href="https://help.disqus.com/customer/portal/articles/466259-privacy-policy">Privacy Policy</a>.
+</div>
+
+<div class="guest-checkbox">
+<label>
+<input name="author-guest" type="checkbox">
+I'd rather post as a guest
+</label>
+</div>
+
+<div class="proceed" data-role="submit-btn-container">
+<button type="submit" class="btn submit" aria-label="Post"><span class="icon-proceed"></span><div class="spinner"></div></button>
+<button type="submit" class="btn next" aria-label="Next"><span class="icon-proceed"></span><div class="spinner"></div></button>
+</div>
+</div>
+</div>
+</section>
+
+</div></div>
+</div>
+</form></div>
+
+<button class="alert realtime" style="display: none" data-role="realtime-notification">
+</button>
+
+<div id="no-posts" style="display:none"></div>
+
+<ul id="post-list" class="post-list"><li id="post-1178094551" class="post"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/alexandergriccio/" class="user" data-action="profile" data-username="alexandergriccio">
+<img data-role="user-avatar" data-user="62536675" src="a_data_003/noavatar92_002.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header>
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/alexandergriccio/" data-action="profile" data-username="alexandergriccio" data-role="username">Alexander G. Riccio</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://pythoncentral.io/difference-between-staticmethod-and-classmethod-in-python/#comment-1178094551" data-role="relative-time" class="time-ago" title="Friday, December 27, 2013 4:42 PM">2 years ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Lines 10-17 in the @staticmethod sample case need indentation.</p><p>I love the post!</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+<menu>
+
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-4" data-action="upvote" title="">
+
+<span class="updatable count" data-role="likes">4</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://pythoncentral.io/difference-between-staticmethod-and-classmethod-in-python/#comment-1178094551">Link</a></li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:1178094551">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="btn btn-small"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li id="post-1239676079" class="post"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/disqus_ncxT4ELKGt/" class="user" data-action="profile" data-username="disqus_ncxT4ELKGt">
+<img data-role="user-avatar" data-user="67365786" src="a_data_003/noavatar92_002.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header>
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/disqus_ncxT4ELKGt/" data-action="profile" data-username="disqus_ncxT4ELKGt" data-role="username">Alex Dalyac</a></span>
+
+<span><a href="http://pythoncentral.io/difference-between-staticmethod-and-classmethod-in-python/#comment-1178094551" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> Alexander G. Riccio</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://pythoncentral.io/difference-between-staticmethod-and-classmethod-in-python/#comment-1239676079" data-role="relative-time" class="time-ago" title="Tuesday, February 11, 2014 8:31 PM">2 years ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>thanks for pointing that out! it confused me.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+<menu>
+
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://pythoncentral.io/difference-between-staticmethod-and-classmethod-in-python/#comment-1239676079">Link</a></li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:1239676079">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="btn btn-small"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li></ul>
+
+</li><li id="post-1740138116" class="post"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/disqus_7itAk7LENC/" class="user" data-action="profile" data-username="disqus_7itAk7LENC">
+<img data-role="user-avatar" data-user="135523360" src="a_data_003/noavatar92_002.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header>
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/disqus_7itAk7LENC/" data-action="profile" data-username="disqus_7itAk7LENC" data-role="username">Julyan</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://pythoncentral.io/difference-between-staticmethod-and-classmethod-in-python/#comment-1740138116" data-role="relative-time" class="time-ago" title="Saturday, December 13, 2014 5:58 PM">10 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>This is fantastic. Really helped me to understand like no other blog article!</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+<menu>
+
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-2" data-action="upvote" title="">
+
+<span class="updatable count" data-role="likes">2</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://pythoncentral.io/difference-between-staticmethod-and-classmethod-in-python/#comment-1740138116">Link</a></li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:1740138116">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="btn btn-small"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li id="post-1009559387" class="post"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar">
+<div class="user"><img src="a_data_003/noavatar92_002.png" class="user" alt="Avatar"></div>
+</div>
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+<span class="author">yaqian</span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://pythoncentral.io/difference-between-staticmethod-and-classmethod-in-python/#comment-1009559387" data-role="relative-time" class="time-ago" title="Wednesday, August 21, 2013 11:08 AM">2 years ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>put the cross label on Kls.printed, not ik.smethod.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+<menu>
+
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-2" data-action="upvote" title="">
+
+<span class="updatable count" data-role="likes">2</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://pythoncentral.io/difference-between-staticmethod-and-classmethod-in-python/#comment-1009559387">Link</a></li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:1009559387">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="btn btn-small"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li id="post-1009557230" class="post"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar">
+<div class="user"><img src="a_data_003/noavatar92_002.png" class="user" alt="Avatar"></div>
+</div>
+
+<div class="post-body">
+<header>
+<span class="post-byline">
+<span class="author">yaqian</span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://pythoncentral.io/difference-between-staticmethod-and-classmethod-in-python/#comment-1009557230" data-role="relative-time" class="time-ago" title="Wednesday, August 21, 2013 11:07 AM">2 years ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>There is an error in the diagram. we should put the cross label on Kls.printed, not Kls.smethod.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+<menu>
+
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-2" data-action="upvote" title="">
+
+<span class="updatable count" data-role="likes">2</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://pythoncentral.io/difference-between-staticmethod-and-classmethod-in-python/#comment-1009557230">Link</a></li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:1009557230">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="btn btn-small"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li id="post-1725121155" class="post"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/kamelzcs/" class="user" data-action="profile" data-username="kamelzcs">
+<img data-role="user-avatar" data-user="40035414" src="a_data_003/noavatar92_002.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header>
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/kamelzcs/" data-action="profile" data-username="kamelzcs" data-role="username">kamelzcs</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://pythoncentral.io/difference-between-staticmethod-and-classmethod-in-python/#comment-1725121155" data-role="relative-time" class="time-ago" title="Thursday, December 4, 2014 2:59 PM">10 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>It is really great post!</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+<menu>
+
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-1" data-action="upvote" title="">
+
+<span class="updatable count" data-role="likes">1</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://pythoncentral.io/difference-between-staticmethod-and-classmethod-in-python/#comment-1725121155">Link</a></li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:1725121155">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="btn btn-small"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li id="post-1340750703" class="post"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/lorenamesa/" class="user" data-action="profile" data-username="lorenamesa">
+<img data-role="user-avatar" data-user="81533047" src="a_data_003/noavatar92_002.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header>
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/lorenamesa/" data-action="profile" data-username="lorenamesa" data-role="username">Lorena Mesa</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://pythoncentral.io/difference-between-staticmethod-and-classmethod-in-python/#comment-1340750703" data-role="relative-time" class="time-ago" title="Wednesday, April 16, 2014 10:05 PM">a year ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Love this! THX!</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+<menu>
+
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-1" data-action="upvote" title="">
+
+<span class="updatable count" data-role="likes">1</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://pythoncentral.io/difference-between-staticmethod-and-classmethod-in-python/#comment-1340750703">Link</a></li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:1340750703">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="btn btn-small"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li id="post-1239678733" class="post"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/disqus_ncxT4ELKGt/" class="user" data-action="profile" data-username="disqus_ncxT4ELKGt">
+<img data-role="user-avatar" data-user="67365786" src="a_data_003/noavatar92_002.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header>
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/disqus_ncxT4ELKGt/" data-action="profile" data-username="disqus_ncxT4ELKGt" data-role="username">Alex Dalyac</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://pythoncentral.io/difference-between-staticmethod-and-classmethod-in-python/#comment-1239678733" data-role="relative-time" class="time-ago" title="Tuesday, February 11, 2014 8:33 PM">2 years ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>love the fact that you're using all these examples and diagrams!<br>the classmethod example was great - now I know when to use those.<br>but
+ I still don't understand when I would want to use staticmethods, 
+because it seemed to me that the staticmethod examples were useless 
+functions that didn't really do anything.<br>also, what does one call a method that neither a classmethod nor a staticmethod? an instance method?</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+<menu>
+
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-1" data-action="upvote" title="">
+
+<span class="updatable count" data-role="likes">1</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://pythoncentral.io/difference-between-staticmethod-and-classmethod-in-python/#comment-1239678733">Link</a></li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:1239678733">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="btn btn-small"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li id="post-2198131587" class="post"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/disqus_QzVisr4y35/" class="user" data-action="profile" data-username="disqus_QzVisr4y35">
+<img data-role="user-avatar" data-user="144361016" src="a_data_003/noavatar92_002.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header>
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/disqus_QzVisr4y35/" data-action="profile" data-username="disqus_QzVisr4y35" data-role="username">ali reza</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://pythoncentral.io/difference-between-staticmethod-and-classmethod-in-python/#comment-2198131587" data-role="relative-time" class="time-ago" title="Monday, August 17, 2015 3:36 PM">2 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>TNX TNX TNX</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+<menu>
+
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://pythoncentral.io/difference-between-staticmethod-and-classmethod-in-python/#comment-2198131587">Link</a></li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2198131587">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="btn btn-small"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li id="post-2197477433" class="post"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/disqus_x4ZeuDHNtP/" class="user" data-action="profile" data-username="disqus_x4ZeuDHNtP">
+<img data-role="user-avatar" data-user="51587252" src="a_data_003/noavatar92_002.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header>
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/disqus_x4ZeuDHNtP/" data-action="profile" data-username="disqus_x4ZeuDHNtP" data-role="username">Jake Locker</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://pythoncentral.io/difference-between-staticmethod-and-classmethod-in-python/#comment-2197477433" data-role="relative-time" class="time-ago" title="Monday, August 17, 2015 3:07 AM">2 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>THANK YOU! I have been trying to find a post which actually describes
+ the difference between static and class methods. Everyone just uses 
+interchangeable code that doesn't explain it. Thanks for finally 
+pointing it out!</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+<menu>
+
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://pythoncentral.io/difference-between-staticmethod-and-classmethod-in-python/#comment-2197477433">Link</a></li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2197477433">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="btn btn-small"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li id="post-2171443521" class="post"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/horstjens/" class="user" data-action="profile" data-username="horstjens">
+<img data-role="user-avatar" data-user="11201753" src="a_data_003/noavatar92_002.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header>
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/horstjens/" data-action="profile" data-username="horstjens" data-role="username">Horst JENS</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://pythoncentral.io/difference-between-staticmethod-and-classmethod-in-python/#comment-2171443521" data-role="relative-time" class="time-ago" title="Monday, August 3, 2015 12:25 PM">2 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>thanks for the post, Arun</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+<menu>
+
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://pythoncentral.io/difference-between-staticmethod-and-classmethod-in-python/#comment-2171443521">Link</a></li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2171443521">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="btn btn-small"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li id="post-2158320889" class="post"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/csukuangfj/" class="user" data-action="profile" data-username="csukuangfj">
+<img data-role="user-avatar" data-user="98225387" src="a_data_003/noavatar92_002.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header>
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/csukuangfj/" data-action="profile" data-username="csukuangfj" data-role="username">csukuangfj</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://pythoncentral.io/difference-between-staticmethod-and-classmethod-in-python/#comment-2158320889" data-role="relative-time" class="time-ago" title="Monday, July 27, 2015 3:56 AM">2 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Good examples. Thanks a lot.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+<menu>
+
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://pythoncentral.io/difference-between-staticmethod-and-classmethod-in-python/#comment-2158320889">Link</a></li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2158320889">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="btn btn-small"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li id="post-1698727479" class="post"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/disqus_flC8GHXLe6/" class="user" data-action="profile" data-username="disqus_flC8GHXLe6">
+<img data-role="user-avatar" data-user="131980720" src="a_data_003/noavatar92_002.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header>
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/disqus_flC8GHXLe6/" data-action="profile" data-username="disqus_flC8GHXLe6" data-role="username">Annie Chang</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://pythoncentral.io/difference-between-staticmethod-and-classmethod-in-python/#comment-1698727479" data-role="relative-time" class="time-ago" title="Tuesday, November 18, 2014 1:10 PM">a year ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>`ik1.do_reset()` and `ik1.set_db()` can't work in python 2.7.</p><p>Guess this is an article for python 3.0.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+<menu>
+
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://pythoncentral.io/difference-between-staticmethod-and-classmethod-in-python/#comment-1698727479">Link</a></li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:1698727479">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="btn btn-small"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li id="post-1482654335" class="post"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/gorenali/" class="user" data-action="profile" data-username="gorenali">
+<img data-role="user-avatar" data-user="69572631" src="a_data_003/noavatar92_002.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header>
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/gorenali/" data-action="profile" data-username="gorenali" data-role="username">Ali</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://pythoncentral.io/difference-between-staticmethod-and-classmethod-in-python/#comment-1482654335" data-role="relative-time" class="time-ago" title="Sunday, July 13, 2014 9:16 AM">a year ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>I love this post thanks Arun</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+<menu>
+
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://pythoncentral.io/difference-between-staticmethod-and-classmethod-in-python/#comment-1482654335">Link</a></li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:1482654335">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="btn btn-small"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li><li id="post-1429715350" class="post"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/swarvanusengupta/" class="user" data-action="profile" data-username="swarvanusengupta">
+<img data-role="user-avatar" data-user="110250481" src="a_data_003/noavatar92_002.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header>
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/swarvanusengupta/" data-action="profile" data-username="swarvanusengupta" data-role="username">Swarvanu Sengupta</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://pythoncentral.io/difference-between-staticmethod-and-classmethod-in-python/#comment-1429715350" data-role="relative-time" class="time-ago" title="Wednesday, June 11, 2014 8:47 AM">a year ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>can we call __init__ from static method inside of a class..</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer>
+<menu>
+
+<li class="voting" data-role="voting">
+<a href="#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="#" data-action="reply">
+<i class="icon icon-mobile icon-reply"></i><span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="share">
+<a class="toggle"><i class="icon icon-mobile icon-share"></i><span class="text">Share ›</span></a>
+<ul>
+<li class="twitter"><a href="#" data-action="share:twitter">Twitter</a></li>
+<li class="facebook"><a href="#" data-action="share:facebook">Facebook</a></li>
+<li class="link"><a href="http://pythoncentral.io/difference-between-staticmethod-and-classmethod-in-python/#comment-1429715350">Link</a></li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:1429715350">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="#" class="btn btn-small"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li></ul>
+
+<div class="load-more" data-role="more" style="display:none">
+<a href="#" data-action="more-posts" class="btn">Load more comments</a>
+</div>
+</div>
+
+</section>
+
+<div id="placement-bottom" data-tracking-area="discovery-south"></div>
+
+<div id="footer" data-tracking-area="footer">
+<ul>
+<li class="logo"><a href="https://disqus.com/" rel="nofollow" title="Powered by Disqus">Powered by Disqus</a></li>
+<li id="thread-subscribe-button" class="email"> 
+<div class="default">
+<a href="#" rel="nofollow" data-action="subscribe" title="Subscribe and get email updates from this discussion"><i aria-hidden="true" class="icon-mail"></i><span class="clip">Subscribe</span> <i aria-hidden="true" class="icon-checkmark"></i></a>
+</div>
+<div class="form">
+<div class="input-wrapper"><input id="thread-subscribe-email" placeholder="yourname@email.com" type="email"></div>
+</div>
+</li>
+<li class="install">
+<a href="https://publishers.disqus.com/engage?utm_source=pythoncentral&amp;utm_medium=Disqus-Footer" rel="nofollow" target="_blank">
+<i aria-hidden="true" class="icon-disqus"></i>
+<span class="clip">Add Disqus to your site</span>
+</a>
+</li>
+<li class="privacy">
+<a href="https://help.disqus.com/customer/portal/articles/1657951?utm_source=disqus&amp;utm_medium=embed-footer&amp;utm_content=privacy-btn" rel="nofollow" target="_blank">
+<i aria-hidden="true" class="icon-lock"></i>
+<span class="clip">Privacy</span>
+</a>
+</li>
+</ul>
+</div>
+</div></body></html>

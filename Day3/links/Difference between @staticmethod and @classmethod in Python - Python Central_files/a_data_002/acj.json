@@ -1,0 +1,25 @@
+OX_7292910335({
+  "ads":{
+    "medium":"w",
+    "record_tmpl":"http://uk-ads.openx.net/{medium}/1.0/{rtype}?ts={txn_state}",
+    "pixels":"http://eu-u.openx.net/w/1.0/pd?plm=6&ph=50ab0170-10fc-4aec-b816-8e01043433e7",
+    "adunits" : [
+      {
+        "auid":"538035650",
+        "chain":[
+          {
+            "is_fallback":1,
+            "ad_id":"0",
+            "width":"728",
+            "height":"90",
+            "html":"<script type=\"text/javascript\">if(typeof(kmn_sa)!=='undefined')kmn_sa.get_np('21bbd78cfc03ac4cf1707daaefeb6bc6');else document.write('<scr'+'ipt src=\"http://s.komoona.com/passback/np/21bbd78cfc03ac4cf1707daaefeb6bc6.js\" type=\"text/javascript\"></scr'+'ipt>');</script>",
+            "target":"_blank",
+            "ts":"1fHJpZD01MTE4ZTIxMi1lYzhiLTQ0ZDItYmYxYi05MmZhYWY1NDM5NjR8cnQ9MTQ0Mzg5ODMwNnxhdWlkPTUzODAzNTY1MHxhdW09RE1JRC5XRUJ8c2lkPTUzNzIwNDc4NHxwdWI9MTI2Njg2fHBjPVVTRHxyYWlkPTNiMDJlOGZjLWQ0YzUtNDhmZS04Mjc1LTAwYWJjN2YwOWM4MHx1cj0wcnpYTU91YThC",
+            "type":"html",
+            "ad_url":"<script type=\"text/javascript\">if(typeof(kmn_sa)!=='undefined')kmn_sa.get_np('21bbd78cfc03ac4cf1707daaefeb6bc6');else document.write('<scr'+'ipt src=\"http://s.komoona.com/passback/np/21bbd78cfc03ac4cf1707daaefeb6bc6.js\" type=\"text/javascript\"></scr'+'ipt>');</script>"
+          }
+        ]
+      }
+    ]
+  }
+});

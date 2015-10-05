@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>11.4. marshal — Internal Python object serialization — Python v3.2 documentation</title>
+    <link rel="stylesheet" href="11.4.%20marshal%20%E2%80%94%20Internal%20Python%20object%20serialization%20%E2%80%94%20Python%20v3.2%20documentation_files/default.css" type="text/css">
+    <link rel="stylesheet" href="11.4.%20marshal%20%E2%80%94%20Internal%20Python%20object%20serialization%20%E2%80%94%20Python%20v3.2%20documentation_files/pygments.css" type="text/css">
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="11.4.%20marshal%20%E2%80%94%20Internal%20Python%20object%20serialization%20%E2%80%94%20Python%20v3.2%20documentation_files/jquery.js"></script>
+    <script type="text/javascript" src="11.4.%20marshal%20%E2%80%94%20Internal%20Python%20object%20serialization%20%E2%80%94%20Python%20v3.2%20documentation_files/underscore.js"></script>
+    <script type="text/javascript" src="11.4.%20marshal%20%E2%80%94%20Internal%20Python%20object%20serialization%20%E2%80%94%20Python%20v3.2%20documentation_files/doctools.js"></script>
+    <script type="text/javascript" src="11.4.%20marshal%20%E2%80%94%20Internal%20Python%20object%20serialization%20%E2%80%94%20Python%20v3.2%20documentation_files/sidebar.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml" title="Search within Python v3.2 documentation" href="https://docs.python.org/release/3.2/_static/opensearch.xml">
+    <link rel="author" title="About these documents" href="https://docs.python.org/release/3.2/about.html">
+    <link rel="copyright" title="Copyright" href="https://docs.python.org/release/3.2/copyright.html">
+    <link rel="top" title="Python v3.2 documentation" href="https://docs.python.org/release/3.2/index.html">
+    <link rel="up" title="11. Data Persistence" href="https://docs.python.org/release/3.2/library/persistence.html">
+    <link rel="next" title="11.5. dbm — Interfaces to Unix “databases”" href="https://docs.python.org/release/3.2/library/dbm.html">
+    <link rel="prev" title="11.3. shelve — Python object persistence" href="https://docs.python.org/release/3.2/library/shelve.html">
+    <link rel="shortcut icon" type="image/png" href="11.4.%20marshal%20%E2%80%94%20Internal%20Python%20object%20serialization%20%E2%80%94%20Python%20v3.2%20documentation_files/py.png">
+ 
+
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="https://docs.python.org/release/3.2/genindex.html" title="General Index" accesskey="I">index</a></li>
+        <li class="right">
+          <a href="https://docs.python.org/release/3.2/py-modindex.html" title="Python Module Index">modules</a> |</li>
+        <li class="right">
+          <a href="https://docs.python.org/release/3.2/library/dbm.html" title="11.5. dbm — Interfaces to Unix “databases”" accesskey="N">next</a> |</li>
+        <li class="right">
+          <a href="https://docs.python.org/release/3.2/library/shelve.html" title="11.3. shelve — Python object persistence" accesskey="P">previous</a> |</li>
+        <li><img src="11.4.%20marshal%20%E2%80%94%20Internal%20Python%20object%20serialization%20%E2%80%94%20Python%20v3.2%20documentation_files/py.png" alt="" style="vertical-align: middle; margin-top: -1px"></li>
+        <li><a href="https://docs.python.org/release/3.2/index.html">Python v3.2 documentation</a> »</li>
+
+          <li><a href="https://docs.python.org/release/3.2/library/index.html">The Python Standard Library</a> »</li>
+          <li><a href="https://docs.python.org/release/3.2/library/persistence.html" accesskey="U">11. Data Persistence</a> »</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-marshal">
+<span id="marshal-internal-python-object-serialization"></span><h1>11.4. <a class="reference internal" href="#module-marshal" title="marshal: Convert Python objects to streams of bytes and back (with different constraints)."><tt class="xref py py-mod docutils literal"><span class="pre">marshal</span></tt></a> — Internal Python object serialization<a class="headerlink" href="#module-marshal" title="Permalink to this headline">¶</a></h1>
+<p>This module contains functions that can read and write Python values in a binary
+format.  The format is specific to Python, but independent of machine
+architecture issues (e.g., you can write a Python value to a file on a PC,
+transport the file to a Sun, and read it back there).  Details of the format are
+undocumented on purpose; it may change between Python versions (although it
+rarely does). <a class="footnote-reference" href="#id2" id="id1">[1]</a></p>
+<p id="index-0">This is not a general “persistence” module.  For general persistence and
+transfer of Python objects through RPC calls, see the modules <a class="reference internal" href="https://docs.python.org/release/3.2/library/pickle.html#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><tt class="xref py py-mod docutils literal"><span class="pre">pickle</span></tt></a> and
+<a class="reference internal" href="https://docs.python.org/release/3.2/library/shelve.html#module-shelve" title="shelve: Python object persistence."><tt class="xref py py-mod docutils literal"><span class="pre">shelve</span></tt></a>.  The <a class="reference internal" href="#module-marshal" title="marshal: Convert Python objects to streams of bytes and back (with different constraints)."><tt class="xref py py-mod docutils literal"><span class="pre">marshal</span></tt></a> module exists mainly to support reading and
+writing the “pseudo-compiled” code for Python modules of <tt class="file docutils literal"><span class="pre">.pyc</span></tt> files.
+Therefore, the Python maintainers reserve the right to modify the marshal format
+in backward incompatible ways should the need arise.  If you’re serializing and
+de-serializing Python objects, use the <a class="reference internal" href="https://docs.python.org/release/3.2/library/pickle.html#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><tt class="xref py py-mod docutils literal"><span class="pre">pickle</span></tt></a> module instead – the
+performance is comparable, version independence is guaranteed, and pickle
+supports a substantially wider range of objects than marshal.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The <a class="reference internal" href="#module-marshal" title="marshal: Convert Python objects to streams of bytes and back (with different constraints)."><tt class="xref py py-mod docutils literal"><span class="pre">marshal</span></tt></a> module is not intended to be secure against erroneous or
+maliciously constructed data.  Never unmarshal data received from an
+untrusted or unauthenticated source.</p>
+</div>
+<p>Not all Python object types are supported; in general, only objects whose value
+is independent from a particular invocation of Python can be written and read by
+this module.  The following types are supported: booleans, integers, floating
+point numbers, complex numbers, strings, bytes, bytearrays, tuples, lists, sets,
+frozensets, dictionaries, and code objects, where it should be understood that
+tuples, lists, sets, frozensets and dictionaries are only supported as long as
+the values contained therein are themselves supported; and recursive lists, sets
+and dictionaries should not be written (they will cause infinite loops).  The
+singletons <a class="reference internal" href="https://docs.python.org/release/3.2/library/constants.html#None" title="None"><tt class="xref py py-const xref docutils literal"><span class="pre">None</span></tt></a>, <a class="reference internal" href="https://docs.python.org/release/3.2/library/constants.html#Ellipsis" title="Ellipsis"><tt class="xref py py-const docutils literal"><span class="pre">Ellipsis</span></tt></a> and <a class="reference internal" href="https://docs.python.org/release/3.2/library/exceptions.html#StopIteration" title="StopIteration"><tt class="xref py py-exc docutils literal"><span class="pre">StopIteration</span></tt></a> can also be
+marshalled and unmarshalled.</p>
+<p>There are functions that read/write files as well as functions operating on
+strings.</p>
+<p>The module defines these functions:</p>
+<dl class="function">
+<dt id="marshal.dump">
+<tt class="descclassname">marshal.</tt><tt class="descname">dump</tt><big>(</big><em>value</em>, <em>file</em><span class="optional">[</span>, <em>version</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#marshal.dump" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write the value on the open file.  The value must be a supported type.  The
+file must be an open file object such as <tt class="docutils literal"><span class="pre">sys.stdout</span></tt> or returned by
+<a class="reference internal" href="https://docs.python.org/release/3.2/library/functions.html#open" title="open"><tt class="xref py py-func docutils literal"><span class="pre">open()</span></tt></a> or <tt class="xref py py-func docutils literal"><span class="pre">os.popen()</span></tt>.  It must be opened in binary mode (<tt class="docutils literal"><span class="pre">'wb'</span></tt>
+or <tt class="docutils literal"><span class="pre">'w+b'</span></tt>).</p>
+<p>If the value has (or contains an object that has) an unsupported type, a
+<a class="reference internal" href="https://docs.python.org/release/3.2/library/exceptions.html#ValueError" title="ValueError"><tt class="xref py py-exc docutils literal"><span class="pre">ValueError</span></tt></a> exception is raised — but garbage data will also be written
+to the file.  The object will not be properly read back by <a class="reference internal" href="#marshal.load" title="marshal.load"><tt class="xref py py-func docutils literal"><span class="pre">load()</span></tt></a>.</p>
+<p>The <em>version</em> argument indicates the data format that <tt class="docutils literal"><span class="pre">dump</span></tt> should use
+(see below).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="marshal.load">
+<tt class="descclassname">marshal.</tt><tt class="descname">load</tt><big>(</big><em>file</em><big>)</big><a class="headerlink" href="#marshal.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read one value from the open file and return it.  If no valid value is read
+(e.g. because the data has a different Python version’s incompatible marshal
+format), raise <a class="reference internal" href="https://docs.python.org/release/3.2/library/exceptions.html#EOFError" title="EOFError"><tt class="xref py py-exc docutils literal"><span class="pre">EOFError</span></tt></a>, <a class="reference internal" href="https://docs.python.org/release/3.2/library/exceptions.html#ValueError" title="ValueError"><tt class="xref py py-exc docutils literal"><span class="pre">ValueError</span></tt></a> or <a class="reference internal" href="https://docs.python.org/release/3.2/library/exceptions.html#TypeError" title="TypeError"><tt class="xref py py-exc docutils literal"><span class="pre">TypeError</span></tt></a>.  The
+file must be an open file object opened in binary mode (<tt class="docutils literal"><span class="pre">'rb'</span></tt> or
+<tt class="docutils literal"><span class="pre">'r+b'</span></tt>).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If an object containing an unsupported type was marshalled with <a class="reference internal" href="#marshal.dump" title="marshal.dump"><tt class="xref py py-func docutils literal"><span class="pre">dump()</span></tt></a>,
+<a class="reference internal" href="#marshal.load" title="marshal.load"><tt class="xref py py-func docutils literal"><span class="pre">load()</span></tt></a> will substitute <tt class="xref docutils literal"><span class="pre">None</span></tt> for the unmarshallable type.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="marshal.dumps">
+<tt class="descclassname">marshal.</tt><tt class="descname">dumps</tt><big>(</big><em>value</em><span class="optional">[</span>, <em>version</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#marshal.dumps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the string that would be written to a file by <tt class="docutils literal"><span class="pre">dump(value,</span> <span class="pre">file)</span></tt>.  The
+value must be a supported type.  Raise a <a class="reference internal" href="https://docs.python.org/release/3.2/library/exceptions.html#ValueError" title="ValueError"><tt class="xref py py-exc docutils literal"><span class="pre">ValueError</span></tt></a> exception if value
+has (or contains an object that has) an unsupported type.</p>
+<p>The <em>version</em> argument indicates the data format that <tt class="docutils literal"><span class="pre">dumps</span></tt> should use
+(see below).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="marshal.loads">
+<tt class="descclassname">marshal.</tt><tt class="descname">loads</tt><big>(</big><em>string</em><big>)</big><a class="headerlink" href="#marshal.loads" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert the string to a value.  If no valid value is found, raise
+<a class="reference internal" href="https://docs.python.org/release/3.2/library/exceptions.html#EOFError" title="EOFError"><tt class="xref py py-exc docutils literal"><span class="pre">EOFError</span></tt></a>, <a class="reference internal" href="https://docs.python.org/release/3.2/library/exceptions.html#ValueError" title="ValueError"><tt class="xref py py-exc docutils literal"><span class="pre">ValueError</span></tt></a> or <a class="reference internal" href="https://docs.python.org/release/3.2/library/exceptions.html#TypeError" title="TypeError"><tt class="xref py py-exc docutils literal"><span class="pre">TypeError</span></tt></a>.  Extra characters in the
+string are ignored.</p>
+</dd></dl>
+
+<p>In addition, the following constants are defined:</p>
+<dl class="data">
+<dt id="marshal.version">
+<tt class="descclassname">marshal.</tt><tt class="descname">version</tt><a class="headerlink" href="#marshal.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates the format that the module uses. Version 0 is the historical
+format, version 1 shares interned strings and version 2 uses a binary format
+for floating point numbers. The current version is 2.</p>
+</dd></dl>
+
+<p class="rubric">Footnotes</p>
+<table class="docutils footnote" frame="void" id="id2" rules="none">
+<colgroup><col class="label"><col></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>The name of this module stems from a bit of terminology used by the designers of
+Modula-3 (amongst others), who use the term “marshalling” for shipping of data
+around in a self-contained form. Strictly speaking, “to marshal” means to
+convert some data from internal to external form (in an RPC buffer for instance)
+and “unmarshalling” for the reverse process.</td></tr>
+</tbody>
+</table>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div style="float: left; margin-right: 0px; width: 202px;" class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="https://docs.python.org/release/3.2/library/shelve.html" title="previous chapter">11.3. <tt class="docutils literal docutils literal"><span class="pre">shelve</span></tt> — Python object persistence</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="https://docs.python.org/release/3.2/library/dbm.html" title="next chapter">11.5. <tt class="docutils literal docutils literal"><span class="pre">dbm</span></tt> — Interfaces to Unix “databases”</a></p>
+<h3>This Page</h3>
+<ul class="this-page-menu">
+  <li><a href="https://docs.python.org/release/3.2/bugs.html">Report a Bug</a></li>
+  <li><a href="https://docs.python.org/release/3.2/_sources/library/marshal.txt" rel="nofollow">Show Source</a></li>
+</ul>
+
+<div id="searchbox" style="">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input name="q" size="18" type="text">
+      <input value="Go" type="submit">
+      <input name="check_keywords" value="yes" type="hidden">
+      <input name="area" value="default" type="hidden">
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      <div style="color: rgb(255, 255, 255); border-left: 1px solid rgb(19, 63, 82); font-size: 1.2em; cursor: pointer; height: 1392px; padding-top: 1px; margin-left: 218px;" title="Collapse sidebar" id="sidebarbutton"><span style="display: block; margin-top: 294px;">«</span></div></div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="https://docs.python.org/release/3.2/genindex.html" title="General Index">index</a></li>
+        <li class="right">
+          <a href="https://docs.python.org/release/3.2/py-modindex.html" title="Python Module Index">modules</a> |</li>
+        <li class="right">
+          <a href="https://docs.python.org/release/3.2/library/dbm.html" title="11.5. dbm — Interfaces to Unix “databases”">next</a> |</li>
+        <li class="right">
+          <a href="https://docs.python.org/release/3.2/library/shelve.html" title="11.3. shelve — Python object persistence">previous</a> |</li>
+        <li><img src="11.4.%20marshal%20%E2%80%94%20Internal%20Python%20object%20serialization%20%E2%80%94%20Python%20v3.2%20documentation_files/py.png" alt="" style="vertical-align: middle; margin-top: -1px"></li>
+        <li><a href="https://docs.python.org/release/3.2/index.html">Python v3.2 documentation</a> »</li>
+
+          <li><a href="https://docs.python.org/release/3.2/library/index.html">The Python Standard Library</a> »</li>
+          <li><a href="https://docs.python.org/release/3.2/library/persistence.html">11. Data Persistence</a> »</li> 
+      </ul>
+    </div>
+    <div class="footer">
+    © <a href="https://docs.python.org/release/3.2/copyright.html">Copyright</a> 1990-2011, Python Software Foundation.
+    <br>
+    The Python Software Foundation is a non-profit corporation.  
+    <a href="http://www.python.org/psf/donations/">Please donate.</a>
+    <br>
+    Last updated on Feb 20, 2011.
+    <a href="https://docs.python.org/release/3.2/bugs.html">Found a bug</a>?
+    <br>
+    Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+
+  
+</body></html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>11.2. copyreg — Register pickle support functions — Python v3.2 documentation</title>
+    <link rel="stylesheet" href="11.2.%20copyreg%20%E2%80%94%20Register%20pickle%20support%20functions%20%E2%80%94%20Python%20v3.2%20documentation_files/default.css" type="text/css">
+    <link rel="stylesheet" href="11.2.%20copyreg%20%E2%80%94%20Register%20pickle%20support%20functions%20%E2%80%94%20Python%20v3.2%20documentation_files/pygments.css" type="text/css">
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="11.2.%20copyreg%20%E2%80%94%20Register%20pickle%20support%20functions%20%E2%80%94%20Python%20v3.2%20documentation_files/jquery.js"></script>
+    <script type="text/javascript" src="11.2.%20copyreg%20%E2%80%94%20Register%20pickle%20support%20functions%20%E2%80%94%20Python%20v3.2%20documentation_files/underscore.js"></script>
+    <script type="text/javascript" src="11.2.%20copyreg%20%E2%80%94%20Register%20pickle%20support%20functions%20%E2%80%94%20Python%20v3.2%20documentation_files/doctools.js"></script>
+    <script type="text/javascript" src="11.2.%20copyreg%20%E2%80%94%20Register%20pickle%20support%20functions%20%E2%80%94%20Python%20v3.2%20documentation_files/sidebar.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml" title="Search within Python v3.2 documentation" href="https://docs.python.org/release/3.2/_static/opensearch.xml">
+    <link rel="author" title="About these documents" href="https://docs.python.org/release/3.2/about.html">
+    <link rel="copyright" title="Copyright" href="https://docs.python.org/release/3.2/copyright.html">
+    <link rel="top" title="Python v3.2 documentation" href="https://docs.python.org/release/3.2/index.html">
+    <link rel="up" title="11. Data Persistence" href="https://docs.python.org/release/3.2/library/persistence.html">
+    <link rel="next" title="11.3. shelve — Python object persistence" href="https://docs.python.org/release/3.2/library/shelve.html">
+    <link rel="prev" title="11.1. pickle — Python object serialization" href="https://docs.python.org/release/3.2/library/pickle.html">
+    <link rel="shortcut icon" type="image/png" href="11.2.%20copyreg%20%E2%80%94%20Register%20pickle%20support%20functions%20%E2%80%94%20Python%20v3.2%20documentation_files/py.png">
+ 
+
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="https://docs.python.org/release/3.2/genindex.html" title="General Index" accesskey="I">index</a></li>
+        <li class="right">
+          <a href="https://docs.python.org/release/3.2/py-modindex.html" title="Python Module Index">modules</a> |</li>
+        <li class="right">
+          <a href="https://docs.python.org/release/3.2/library/shelve.html" title="11.3. shelve — Python object persistence" accesskey="N">next</a> |</li>
+        <li class="right">
+          <a href="https://docs.python.org/release/3.2/library/pickle.html" title="11.1. pickle — Python object serialization" accesskey="P">previous</a> |</li>
+        <li><img src="11.2.%20copyreg%20%E2%80%94%20Register%20pickle%20support%20functions%20%E2%80%94%20Python%20v3.2%20documentation_files/py.png" alt="" style="vertical-align: middle; margin-top: -1px"></li>
+        <li><a href="https://docs.python.org/release/3.2/index.html">Python v3.2 documentation</a> »</li>
+
+          <li><a href="https://docs.python.org/release/3.2/library/index.html">The Python Standard Library</a> »</li>
+          <li><a href="https://docs.python.org/release/3.2/library/persistence.html" accesskey="U">11. Data Persistence</a> »</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-copyreg">
+<span id="copyreg-register-pickle-support-functions"></span><h1>11.2. <a class="reference internal" href="#module-copyreg" title="copyreg: Register pickle support functions."><tt class="xref py py-mod docutils literal"><span class="pre">copyreg</span></tt></a> — Register <a class="reference internal" href="https://docs.python.org/release/3.2/library/pickle.html#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><tt class="xref py py-mod docutils literal"><span class="pre">pickle</span></tt></a> support functions<a class="headerlink" href="#module-copyreg" title="Permalink to this headline">¶</a></h1>
+<p id="index-0">The <a class="reference internal" href="#module-copyreg" title="copyreg: Register pickle support functions."><tt class="xref py py-mod docutils literal"><span class="pre">copyreg</span></tt></a> module provides support for the <a class="reference internal" href="https://docs.python.org/release/3.2/library/pickle.html#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><tt class="xref py py-mod docutils literal"><span class="pre">pickle</span></tt></a> module.  The
+<a class="reference internal" href="https://docs.python.org/release/3.2/library/copy.html#module-copy" title="copy: Shallow and deep copy operations."><tt class="xref py py-mod docutils literal"><span class="pre">copy</span></tt></a> module is likely to use this in the future as well.  It provides
+configuration information about object constructors which are not classes.
+Such constructors may be factory functions or class instances.</p>
+<dl class="function">
+<dt id="copyreg.constructor">
+<tt class="descclassname">copyreg.</tt><tt class="descname">constructor</tt><big>(</big><em>object</em><big>)</big><a class="headerlink" href="#copyreg.constructor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares <em>object</em> to be a valid constructor.  If <em>object</em> is not callable (and
+hence not valid as a constructor), raises <a class="reference internal" href="https://docs.python.org/release/3.2/library/exceptions.html#TypeError" title="TypeError"><tt class="xref py py-exc docutils literal"><span class="pre">TypeError</span></tt></a>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="copyreg.pickle">
+<tt class="descclassname">copyreg.</tt><tt class="descname">pickle</tt><big>(</big><em>type</em>, <em>function</em>, <em>constructor=None</em><big>)</big><a class="headerlink" href="#copyreg.pickle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that <em>function</em> should be used as a “reduction” function for objects
+of type <em>type</em>.  <em>function</em> should return either a string or a tuple
+containing two or three elements.</p>
+<p>The optional <em>constructor</em> parameter, if provided, is a callable object which
+can be used to reconstruct the object when called with the tuple of arguments
+returned by <em>function</em> at pickling time.  <a class="reference internal" href="https://docs.python.org/release/3.2/library/exceptions.html#TypeError" title="TypeError"><tt class="xref py py-exc docutils literal"><span class="pre">TypeError</span></tt></a> will be raised if
+<em>object</em> is a class or <em>constructor</em> is not callable.</p>
+<p>See the <a class="reference internal" href="https://docs.python.org/release/3.2/library/pickle.html#module-pickle" title="pickle: Convert Python objects to streams of bytes and back."><tt class="xref py py-mod docutils literal"><span class="pre">pickle</span></tt></a> module for more details on the interface expected of
+<em>function</em> and <em>constructor</em>.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div style="float: left; margin-right: 0px; width: 202px;" class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="https://docs.python.org/release/3.2/library/pickle.html" title="previous chapter">11.1. <tt class="docutils literal"><span class="pre">pickle</span></tt> — Python object serialization</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="https://docs.python.org/release/3.2/library/shelve.html" title="next chapter">11.3. <tt class="docutils literal"><span class="pre">shelve</span></tt> — Python object persistence</a></p>
+<h3>This Page</h3>
+<ul class="this-page-menu">
+  <li><a href="https://docs.python.org/release/3.2/bugs.html">Report a Bug</a></li>
+  <li><a href="https://docs.python.org/release/3.2/_sources/library/copyreg.txt" rel="nofollow">Show Source</a></li>
+</ul>
+
+<div id="searchbox" style="">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input name="q" size="18" type="text">
+      <input value="Go" type="submit">
+      <input name="check_keywords" value="yes" type="hidden">
+      <input name="area" value="default" type="hidden">
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      <div style="color: rgb(255, 255, 255); border-left: 1px solid rgb(19, 63, 82); font-size: 1.2em; cursor: pointer; height: 414px; padding-top: 1px; margin-left: 218px;" title="Collapse sidebar" id="sidebarbutton"><span style="display: block; margin-top: 294px;">«</span></div></div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="https://docs.python.org/release/3.2/genindex.html" title="General Index">index</a></li>
+        <li class="right">
+          <a href="https://docs.python.org/release/3.2/py-modindex.html" title="Python Module Index">modules</a> |</li>
+        <li class="right">
+          <a href="https://docs.python.org/release/3.2/library/shelve.html" title="11.3. shelve — Python object persistence">next</a> |</li>
+        <li class="right">
+          <a href="https://docs.python.org/release/3.2/library/pickle.html" title="11.1. pickle — Python object serialization">previous</a> |</li>
+        <li><img src="11.2.%20copyreg%20%E2%80%94%20Register%20pickle%20support%20functions%20%E2%80%94%20Python%20v3.2%20documentation_files/py.png" alt="" style="vertical-align: middle; margin-top: -1px"></li>
+        <li><a href="https://docs.python.org/release/3.2/index.html">Python v3.2 documentation</a> »</li>
+
+          <li><a href="https://docs.python.org/release/3.2/library/index.html">The Python Standard Library</a> »</li>
+          <li><a href="https://docs.python.org/release/3.2/library/persistence.html">11. Data Persistence</a> »</li> 
+      </ul>
+    </div>
+    <div class="footer">
+    © <a href="https://docs.python.org/release/3.2/copyright.html">Copyright</a> 1990-2011, Python Software Foundation.
+    <br>
+    The Python Software Foundation is a non-profit corporation.  
+    <a href="http://www.python.org/psf/donations/">Please donate.</a>
+    <br>
+    Last updated on Feb 20, 2011.
+    <a href="https://docs.python.org/release/3.2/bugs.html">Found a bug</a>?
+    <br>
+    Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+
+  
+</body></html>

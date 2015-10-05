@@ -1,0 +1,3 @@
+var kid='21bbd78cfc03ac4cf1707daaefeb6bc6';document.write('<div id="kmn_tag_'+kid+'" class="kmn-div">');
+kmn_sa.spark(kid,{codes:'e1,o1,t1,p1,h',srv:'e1'});kmn_data[kid]={chain:'N1',codes:['e1','o1','t1','p1','h'],full_index:1,order:'1e',w:728,h:90,s2sCodes:['j','d'],s2sBaseUrl:'//s2s.komoona.com/'};if(!window.OX_ads){OX_ads=[];}OX_ads.push({"auid":"538035650"});kmn_sa.write_js('//uk-ads.openx.net/w/1.0/jstag');
+document.write('</div>');
